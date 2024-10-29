@@ -14,13 +14,24 @@
 
     <title>Document</title>
 </head>
+<style>
+    @media (max-width: 1023px) {
+        #header {
+            display: none;
+        }
+
+        #nav {
+            width: 100% !important;
+        }
+    }
+</style>
 
 <body>
-    <header style="background-color: #4660ff;">
-        <div class="flex items-center justify-around px-4 py-2">
-            <div class="text-white text-2xl font-semibold">GrowMark</div>
+    <header id="header" style="background-color: #4660ff;">
+        <div class="flex items-center justify-around px-4">
+            <div class="text-white text-3xl font-semibold">GrowMark</div>
             <div class="flex items-center">
-                <div class="text-white flex items-center mx-2">
+                <div class="text-white flex items-center">
                     <div class="p-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                             stroke-width="1.5" stroke="currentColor" class="h-5 w-5">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -31,7 +42,7 @@
                         </svg></div>
                     <p class="text-sm">123 Street, New York, USA</p>
                 </div>
-                <div class="text-white flex items-center mx-2">
+                <div class="text-white flex items-center">
                     <div class="p-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                             stroke-width="1.5" stroke="currentColor" class="h-5 w-5">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -42,7 +53,7 @@
                         </svg></div>
                     <p class="text-sm">456 Avenue, New York, USA</p>
                 </div>
-                <div class="text-white flex items-center mx-2">
+                <div class="text-white flex items-center">
                     <div class="p-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                             stroke-width="1.5" stroke="currentColor" class="h-5 w-5">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -61,112 +72,33 @@
             </div>
         </div>
     </header>
-    <nav class="bg-white text-black">
-        <div class="container mx-auto px-28 py-4 flex justify-between items-center">
-            <div class="hidden md:flex space-x-4"><a href="#" class="hover:text-blue-700 pr-3 py-2 rounded">Home</a><a
-                    href="#" class="hover:text-blue-700 px-3 py-2 rounded">About</a><a href="#"
-                    class="hover:text-blue-700 px-3 py-2 rounded">Services</a><a href="#"
-                    class="hover:text-blue-700 px-3 py-2 rounded">Contact</a></div>
-            <div class="hidden md:flex space-x-4 ps-3"><button class="p-3 rounded-3xl text-sm text-white pr-3"
-                    style="background-color: #4660ff;">Get A Quote</button></div><button class="md:hidden"><svg
-                    xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
-                    </path>
-                </svg></button>
+    <nav class="bg-white text-black flex justify-center">
+        <div id="nav" class="p-4 flex justify-between items-center" style="width: 70%;">
+            <div id="nav-links" class="hidden lg:flex space-x-4">
+                <a href="#" class="hover:text-blue-700 pr-3 py-2 rounded text-lg">Home</a>
+                <a href="#" class="hover:text-blue-700 px-3 py-2 rounded text-lg">About</a>
+                <a href="#" class="hover:text-blue-700 px-3 py-2 rounded text-lg">Services</a>
+                <a href="#" class="hover:text-blue-700 px-3 py-2 rounded text-lg">Pages</a>
+                <a href="#" class="hover:text-blue-700 px-3 py-2 rounded text-lg">Contact</a>
+            </div>
+            <div class="hidden lg:flex flex-col space-x-4 ps-3">
+                <button class="p-3 rounded-3xl pr-3" style="background-color: #4660ff;">
+                    <div class="text-white text-lg">
+                        Get A Quote
+                    </div>
+                </button>
+            </div>
+            <div class="lg:hidden my-1.5 mx-5 " onclick="navToggle()">
+                <div class="text-2xl font-semibold">GrowMark</div>
+            </div>
+            <div class="lg:hidden my-1.5 mx-5 " onclick="navToggle()">
+                <div class="line-1 block h-0.5 w-6 m-1.5 bg-black"></div>
+                <div class="line-2 block h-0.5 w-6 m-1.5 bg-black"></div>
+                <div class="line-3 block h-0.5 w-6 m-1.5 bg-black"></div>
+            </div>
+
         </div>
     </nav>
-    <div class="relative w-full h-screen overflow-hidden">
-        <div class="carousel-slide absolute inset-0 transition-opacity duration-500 opacity-100">
-            <img src="images/carousel-1.jpg" alt="First Slide" class="object-cover w-full h-full">
-            <div class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center bg-black bg-opacity-50">
-                <h2 class="text-3xl md:text-4xl font-bold text-white">First Slide</h2>
-                <p class="mt-2 text-lg md:text-xl text-white">Description for the first slide</p>
-            </div>
-        </div>
-        <div class="carousel-slide absolute inset-0 transition-opacity duration-500 opacity-0">
-            <img src="images/carousel-2.jpg" alt="Second Slide" class="object-cover w-full h-full">
-            <div class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center bg-black bg-opacity-50">
-                <h2 class="text-3xl md:text-4xl font-bold text-white">Second Slide</h2>
-                <p class="mt-2 text-lg md:text-xl text-white">Description for the second slide</p>
-            </div>
-        </div>
-        <button style="background-color: #4660ff;" id="prev" class="absolute left-5 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full shadow-md hover:bg-gray-200 text-white flex items-center justify-center">❮</button>
-        <button style="background-color: #4660ff;" id="next" class="absolute right-5 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full shadow-md hover:bg-gray-200 text-white flex items-center justify-center">❯</button>
-    </div>
-    
-    <div class="p-24">
-        <div class="flex justify-center">
-            <div class="shadow">
-                <div class="w-72">
-                    <div class="flex-col justify-sta py-8 pl-10 pr-10"><img src="images/icon/icon-1.png" alt=""
-                            class="py-1.5">
-                        <div class="py-1.5 text-xl font-medium">Award winning</div>
-                        <p class="py-1.5 text-zinc-400 text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Tenetur, animi.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="shadow">
-                <div class="w-72">
-                    <div class="flex-col justify-sta py-8 pl-10 pr-10"><img src="images/icon/icon-1.png" alt=""
-                            class="py-1.5">
-                        <div class="py-1.5 text-xl font-medium">Award winning</div>
-                        <p class="py-1.5 text-zinc-400 text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Tenetur, animi.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="shadow">
-                <div class="w-72">
-                    <div class="flex-col justify-sta py-8 pl-10 pr-10"><img src="images/icon/icon-1.png" alt=""
-                            class="py-1.5">
-                        <div class="py-1.5 text-xl font-medium">Award winning</div>
-                        <p class="py-1.5 text-zinc-400 text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Tenetur, animi.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="shadow">
-                <div class="w-72">
-                    <div class="flex-col justify-sta py-8 pl-10 pr-10"><img src="images/icon/icon-1.png" alt=""
-                            class="py-1.5">
-                        <div class="py-1.5 text-xl font-medium">Award winning</div>
-                        <p class="py-1.5 text-zinc-400 text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Tenetur, animi.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 </body>
-<script>
-    const slides = document.querySelectorAll('.carousel-slide');
-    const prevButton = document.getElementById('prev');
-    const nextButton = document.getElementById('next');
-
-    let currentSlide = 0;
-
-    function showSlide(index) {
-        slides.forEach((slide, i) => {
-            slide.style.opacity = i === index ? '1' : '0';
-        });
-    }
-
-    function nextSlide() {
-        currentSlide = (currentSlide + 1) % slides.length;
-        showSlide(currentSlide);
-    }
-
-    function prevSlide() {
-        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-        showSlide(currentSlide);
-    }
-
-    nextButton.addEventListener('click', nextSlide);
-    prevButton.addEventListener('click', prevSlide);
-
-    setInterval(nextSlide, 5000); 
-</script>
 
 </html>
