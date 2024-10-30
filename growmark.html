@@ -6,25 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-    <style>
-        .carousel-slide {
-            transition: opacity 0.5s ease-in-out;
-        }
-    </style>
-
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="/growmark.css">
+    <script src="/growmark.js"></script>
+    <title>Growmark Carousel</title>
 </head>
-<style>
-    @media (max-width: 1023px) {
-        #header {
-            display: none;
-        }
-
-        #nav {
-            width: 100% !important;
-        }
-    }
-</style>
 
 <body>
     <header id="header" style="background-color: #4660ff;">
@@ -32,39 +19,46 @@
             <div class="text-white text-3xl font-semibold">GrowMark</div>
             <div class="flex items-center">
                 <div class="text-white flex items-center">
-                    <div class="p-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                            stroke-width="1.5" stroke="currentColor" class="h-5 w-5">
+                    <div class="p-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="h-5 w-5">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z">
                             </path>
-                        </svg></div>
+                        </svg>
+                    </div>
                     <p class="text-sm">123 Street, New York, USA</p>
                 </div>
                 <div class="text-white flex items-center">
-                    <div class="p-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                            stroke-width="1.5" stroke="currentColor" class="h-5 w-5">
+                    <div class="p-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="h-5 w-5">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z">
                             </path>
-                        </svg></div>
-                    <p class="text-sm">456 Avenue, New York, USA</p>
+                        </svg>
+                    </div>
+                    <p class="text-sm">123 Street, New York, USA</p>
                 </div>
                 <div class="text-white flex items-center">
-                    <div class="p-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                            stroke-width="1.5" stroke="currentColor" class="h-5 w-5">
+                    <div class="p-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="h-5 w-5">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z">
                             </path>
-                        </svg></div>
-                    <p class="text-sm">456 Avenue, New York, USA</p>
+                        </svg>
+                    </div>
+                    <p class="text-sm">123 Street, New York, USA</p>
                 </div>
-                <div class="flex p-2">
+
+                <div class="text-white flex items-center">
                     <div class="p-2"><i class="bi bi-facebook" style="font-size: 28px; color: white;"></i></div>
                     <div class="p-2"><i class="bi bi-twitter" style="font-size: 28px; color: white;"></i></div>
                     <div class="p-2"><i class="bi bi-linkedin" style="font-size: 28px; color: white;"></i></div>
@@ -72,6 +66,7 @@
             </div>
         </div>
     </header>
+
     <nav class="bg-white text-black flex justify-center">
         <div id="nav" class="p-4 flex justify-between items-center" style="width: 70%;">
             <div id="nav-links" class="hidden lg:flex space-x-4">
@@ -83,22 +78,158 @@
             </div>
             <div class="hidden lg:flex flex-col space-x-4 ps-3">
                 <button class="p-3 rounded-3xl pr-3" style="background-color: #4660ff;">
-                    <div class="text-white text-lg">
-                        Get A Quote
-                    </div>
+                    <div class="text-white text-lg">Get A Quote</div>
                 </button>
             </div>
-            <div class="lg:hidden my-1.5 mx-5 " onclick="navToggle()">
-                <div class="text-2xl font-semibold">GrowMark</div>
-            </div>
-            <div class="lg:hidden my-1.5 mx-5 " onclick="navToggle()">
-                <div class="line-1 block h-0.5 w-6 m-1.5 bg-black"></div>
-                <div class="line-2 block h-0.5 w-6 m-1.5 bg-black"></div>
-                <div class="line-3 block h-0.5 w-6 m-1.5 bg-black"></div>
-            </div>
-
         </div>
     </nav>
+
+    <div class="w-full relative">
+        <div class="swiper default-carousel swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="flex justify-center items-center">
+                        <img src="images/carousel-1.jpg" class="w-full h-auto object-contain">
+                        <div
+                            class="slider-text-1 text-start absolute top-[20%] text-white left-[5%] lg:w-1/2 xl:top-[33.33%] lg:left-[15%]">
+                            <h3 class="text-xl font-light sm:text-2xl md:text-3xl">Welcome to <span
+                                    class="font-medium text-2xl sm:text-4xl md:text-5xl">GrowMark</span></h3>
+                            <h1 class="text-4xl font-bold sm:text-6xl md:text-7xl">Unlock Your Business Growth</h1>
+                            <button class="bg-blue-600 px-6 py-3 my-10 rounded-3xl text-lg">Explore More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="flex justify-center items-center">
+                        <img src="images/carousel-2.jpg" alt="Carousel Image 2" class="w-full h-auto object-contain">
+                        <div
+                            class="slider-text-2 text-end absolute top-[20%] text-white right-[5%] lg:w-1/2 xl:top-[33.33%] lg:right-[15%]">
+                            <h3 class="text-xl font-light sm:text-2xl md:text-3xl">Welcome to <span
+                                    class="font-medium text-2xl sm:text-4xl md:text-5xl">GrowMark</span></h3>
+                            <h1 class="text-4xl font-bold sm:text-6xl md:text-7xl">Ready To Grow Your Business</h1>
+                            <button class="bg-blue-600 px-6 py-3 my-10 rounded-3xl text-lg">Explore More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="swiper-custom-right cursor-pointer absolute top-[40%] z-50 right-[2%] lg:right-[8%] text-white text-center rounded-full 
+        flex justify-center items-center bg-[#0065fd77] py-2 w-12 h-12 md:py-4 md:h-16 md:w-16 text-xl">
+                <i class="bi bi-chevron-right"></i>
+            </button>
+
+            <button class="swiper-custom-left cursor-pointer absolute top-[40%] z-50 left-[2%] lg:left-[8%] text-white text-center rounded-full 
+        flex justify-center items-center bg-[#0065fd77] py-2 w-12 h-12 md:py-4 md:h-16 md:w-16 text-xl">
+                <i class="bi bi-chevron-left"></i>
+            </button>
+
+        </div>
+    </div>
+    <div class="grid-container flex flex-wrap lg:flex-nowrap my-20 mx-8 justify-center gap-1 ">
+        <div class="grid-item p-10 bg-white md:max-w-xs shadow-[0px_0px_10px_1px_rgba(0,0,0,0.05)]"
+            style="transform: translate3d(0px, 0px, 0px); opacity: 1;">
+            <img class="my-3" src="images/icon/icon-1.png" alt="">
+            <h1 class="text-xl font-medium my-3">Award Winning</h1>
+            <p class="font-light my-3">Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam</p>
+        </div>
+
+        <div class="grid-item p-10 bg-white md:max-w-xs shadow-[0px_0px_10px_1px_rgba(0,0,0,0.05)]"
+            style="transform: translate3d(0px, 0px, 0px); opacity: 1;">
+            <img class="my-3" src="images/icon/icon-1.png" alt="">
+            <h1 class="text-xl font-medium my-3">Professional Staff</h1>
+            <p class="font-light my-3">Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam</p>
+        </div>
+
+        <div class="grid-item  p-10 bg-white md:max-w-xs shadow-[0px_0px_10px_1px_rgba(0,0,0,0.05)]"
+            style="transform: translate3d(0px, 0px, 0px); opacity: 1;">
+            <img class="my-3" src="images/icon/icon-1.png" alt="">
+            <h1 class="text-xl font-medium my-3">Fair Prices</h1>
+            <p class="font-light my-3">Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam </p>
+        </div>
+
+        <div class="grid-item p-10 bg-white md:max-w-xs shadow-[0px_0px_10px_1px_rgba(0,0,0,0.05)]"
+            style="transform: translate3d(0px, 0px, 0px); opacity: 1;">
+            <img class="my-3" src="images/icon/icon-1.png" alt="">
+            <h1 class="text-xl font-medium my-3">24/7 Support</h1>
+            <p class="font-light my-3">Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam </p>
+        </div>
+    </div>
+
+    <div class="about max-w-7xl mx-auto my-20 flex flex-col lg:flex-row justify-evenly items-center bg-center">
+        <div class="m-16 rounded-full lg:m-24 xl:m-48 2xl:m-56">
+            <i class="bi bi-play-circle-fill text-blue-500 text-8xl"></i>
+        </div>
+        <div class="bg-white mx-8 p-8 rounded-tl-xl rounded-tr-xl max-w-2xl lg:mt-10">
+            <div class="text-xl sm:text-2xl text-blue-600 my-5">About Us</div>
+            <div class="text-3xl sm:text-4xl font-bold my-3">The Best Marketing Agency to Improve Your Business</div>
+            <div class="font-light text-gray-600 my-5">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.
+                Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo</div>
+            <div class="flex justify-start">
+                <div class="flex flex-col">
+                    <div><img src="images/icon/icon-5.png" alt=""></div>
+                    <div class="text-xl font-medium my-3">Managed Services</div>
+                    <div class="font-light text-gray-600 my-3">Clita erat ipsum et lorem et sit sed stet lorem</div>
+                </div>
+                <div class="flex flex-col">
+                    <div><img src="images/icon/icon-2.png" alt=""></div>
+                    <div class="text-xl font-medium my-3">Managed Services</div>
+                    <div class="font-light text-gray-600 my-3">Clita erat ipsum et lorem et sit sed stet lorem</div>
+                </div>
+            </div>
+            <button class="bg-blue-600 px-6 py-3 my-10 rounded-3xl text-lg text-white">Explore More</button>
+        </div>
+    </div>
+    <div class="flex flex-col justify-center">
+        <div class="services max-w-7xl flex flex-col text-center w-4/5 mx-auto my-10 md:w-1/2 2xl:w-[30%]">
+            <div class="text-xl sm:text-2xl text-blue-600">Our Services</div>
+            <div class="text-3xl sm:text-4xl lg:text-5xl font-bold">Digital Marketing Services That We Offer</div>
+        </div>
+        <div class="">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 flex flex-wrap my-20 mx-8 sm:mx-0 gap-8 text-center 2xl:w-3/4 2xl:mx-auto">
+                <div class="flex flex-col justify-center items-center bg-white shadow-lg p-3 md:w-[360px] md:h-[350px]">
+                    <div class="">
+                        <div><img src="images/icon/icon-2.png" alt=""></div>
+                    </div>
+                    <div>Digital Marketing</div>
+                    <div>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam </div>
+                </div>
+                <div class="flex flex-col justify-center items-center bg-white shadow-lg p-3 md:w-[360px] md:h-[350px]">
+                    <div class="">
+                        <div><img src="images/icon/icon-2.png" alt=""></div>
+                    </div>
+                    <div>Digital Marketing</div>
+                    <div>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam </div>
+                </div>
+                <div class="flex flex-col justify-center items-center bg-white shadow-lg p-3 md:w-[360px] md:h-[350px]">
+                    <div class="">
+                        <div><img src="images/icon/icon-2.png" alt=""></div>
+                    </div>
+                    <div>Digital Marketing</div>
+                    <div>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam </div>
+                </div>
+                <div class="flex flex-col justify-center items-center bg-white shadow-lg p-3 md:w-[360px] md:h-[350px]">
+                    <div class="">
+                        <div><img src="images/icon/icon-2.png" alt=""></div>
+                    </div>
+                    <div>Digital Marketing</div>
+                    <div>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam </div>
+                </div>
+                <div class="flex flex-col justify-center items-center bg-white shadow-lg p-3 md:w-[360px] md:h-[350px]">
+                    <div class="">
+                        <div><img src="images/icon/icon-2.png" alt=""></div>
+                    </div>
+                    <div>Digital Marketing</div>
+                    <div>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam </div>
+                </div>
+                <div class="flex flex-col justify-center items-center bg-white shadow-lg p-3 md:w-[360px] md:h-[350px]">
+                    <div class="">
+                        <div><img src="images/icon/icon-2.png" alt=""></div>
+                    </div>
+                    <div>Digital Marketing</div>
+                    <div>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

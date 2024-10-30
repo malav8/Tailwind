@@ -1,0 +1,31 @@
+@media (max-width: 1023px) {
+    #header {
+        display: none;
+    }
+
+    #nav {
+        width: 100% !important;
+    }
+}
+
+.swiper-pagination-bullet {
+    background: #4f46e5;
+}
+
+.carousel-caption {
+    width: 50%;
+    position: absolute;
+    left: 15%;
+    text-align: start;
+    top: 20%;
+
+}
+
+.custom-shadow {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about{
+    background-image: url('images/about.jpg');
+    background-size: cover;
+}
